@@ -1,0 +1,86 @@
+.btn {
+  @include clear-default-input-style;
+  @include flex-row-center;
+
+  border-radius: 30px;
+  color: #fff;
+  cursor: pointer;
+
+  &_violet {
+    background-color: $violet-main;
+
+    &:hover {
+      background-color: #fff;
+      border: 1px solid $violet-main;
+      color: $violet-main;
+    }
+  }
+
+  &_download {
+    width: 90%;
+    margin: 0 auto;
+    padding: 15px 31px 16px 32px;
+    font-size: 18px;
+    font-weight: 700;
+    position: absolute;
+    bottom: -24px;
+    border: 1px solid transparent;
+
+    @include min-width(#{$landscape-mobile-normal + 1}) {
+      font-size: 21px;
+      max-width: 390px;
+    }
+  }
+
+  &_github {
+    background-color: #f3f3f3;
+    font-family: $font-montseratt;
+    color: #000000;
+    font-size: 21px;
+
+    &:hover {
+      background-color: #273f4c;
+      border: 1px solid #273f4c;
+      color: #ffffff;
+    }
+  }
+
+  &_twitter {
+    background-color: #26a6d1;
+    font-family: $font-montseratt;
+    color: #ffffff;
+    font-size: 21px;
+
+    &:hover {
+      background-color: #fff;
+      border: 1px solid #26a6d1;
+      color: #26a6d1;
+    }
+  }
+
+  &_facebook {
+    background-color: #3b5998;
+    font-family: $font-montseratt;
+    color: #ffffff;
+    font-size: 21px;
+
+    &:hover {
+      background-color: #fff;
+      border: 1px solid #3b5998;
+      color: #3b5998;
+    }
+  }
+}
+
+.arrows-center{
+  display: flex;
+  align-items: center;
+
+  //position: relative;
+  //
+  //&:after{
+  //  position: absolute;
+  //  width: 30px;
+  //
+  //}
+}

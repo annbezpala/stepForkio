@@ -1,0 +1,179 @@
+.carousel{
+  padding: 63px 0 70px;
+  @include flex-column-center;
+
+  &__list{
+    text-align: center;
+    width: 90%;
+    max-width: 945px;
+    display: block;
+    margin:0 auto 35px;
+
+    @include mobile-normal{
+      margin-bottom: 57px;
+    }
+
+    @include tablet{
+      margin-bottom: 22px;
+    }
+
+    @include desktop{
+      margin-bottom: 57px;
+    }
+  }
+
+  &__line{
+    display: none;
+    max-width: 760px;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 60px;
+
+    @include min-width(481px){
+      display: block;
+    }
+  }
+
+  &__social{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    width: 100%;
+
+    @include tablet{
+      max-width: 540px;
+    }
+
+    @include desktop{
+      max-width: 800px;
+      width: 100%;
+    }
+  }
+}
+
+.social-item{
+  max-width: 280px;
+  width: 90%;
+  margin-bottom: 30px;
+
+  &:last-child{
+    margin-bottom: 0;
+  }
+
+  @include min-width(481px){
+    max-width: 240px;
+  }
+
+  @include desktop{
+    &:last-child{
+      margin-right: 0;
+    }
+  }
+
+  &__btn{
+    @include flex-row-center;
+    margin-bottom: 18px;
+    border-radius: 4px;
+    width: 100%;
+    height: 50px;
+    position: relative;
+  }
+
+  &__icon{
+    position: absolute;
+    left: 24px;
+  }
+
+  &__followers{
+    font-family: $font-montseratt;
+    color: $grey;
+    font-size: 14px;
+    text-align: center;
+  }
+}
+
+.carousel-item{
+  padding: 0 25px;
+
+  &__author{
+    @include flex-column-center;
+    margin-bottom: 23px;
+  }
+
+  &__img{
+    background-repeat: round;
+    width: 85px;
+    height: 85px;
+    border-radius: 50%;
+    margin-bottom: 25px;
+  }
+
+  &__name{
+    font-family: $font-montseratt;
+    color: #474747;
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 7px;
+  }
+
+  &__nick{
+    font-family: $font-montseratt;
+    color: $violet-main;
+    font-size: 16px;
+  }
+
+  &__comment{
+    font-family: $font-lato;
+    color: $grey-dark;
+    font-size: 17px;
+    line-height: 24px;
+    margin-bottom: 16px;
+
+    &_violet{
+      color: $violet-main;
+    }
+  }
+
+  &__time-post{
+    font-family: $font-montseratt;
+    color: $grey;
+    font-size: 16px;
+  }
+}
+
+.slick-prev,
+.slick-next {
+  background-color: #fff;
+  background-repeat: no-repeat;
+  width: 10px;
+  border: none;
+  color: transparent;
+  outline: none;
+}
+
+.slick-prev{
+  background-image: url('../img/arrow-l.png');
+  position: relative;
+
+  &::after{
+    content: '';
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    left: -8px;
+    top: -8px;
+  }
+}
+.slick-next{
+  background-image: url('../img/arrow-r.png');
+  position: relative;
+
+  &::after{
+    content: '';
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    left: -8px;
+    top: -8px;
+  }
+}

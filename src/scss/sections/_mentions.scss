@@ -1,0 +1,111 @@
+.mentions {
+  background: url("../img/people-are-talking-bg.jpg") no-repeat center;
+  background-size: cover;
+  background-color: rgba(75, 59, 78, 1);
+  background-blend-mode: multiply;
+  padding: 61px 25px 0 30px;
+  @include flex-column-center;
+
+  @include mobile-normal {
+    padding: 77px 35px 0 35px;
+  }
+
+  @include tablet {
+    padding: 80px 20px 0;
+  }
+
+  &__small-info {
+    display: none;
+    font-size: 14px;
+    line-height: 21px;
+    color: #a291a5;
+    text-align: center;
+    font-family: $font-lato;
+    opacity: 0.8;
+
+    @include min-width(#{$landscape-mobile-big + 1}) {
+      display: block;
+    }
+
+    @include desktop {
+      width: 70%;
+    }
+  }
+
+  &__divider {
+    width: 100%;
+    background-color: #645766;
+    height: 2px;
+
+    @include min-width(#{$landscape-mobile-big + 1}) {
+      margin-top: 17px;
+    }
+  }
+
+  &__title {
+    @include white-bold-centered-text;
+    font-family: $font-montseratt;
+    font-size: 36px;
+    line-height: 48px;
+    margin-bottom: 49px;
+
+    @include mobile-normal {
+      font-size: 42px;
+      line-height: 60px;
+      margin-bottom: 99px;
+    }
+
+    @include tablet {
+      font-size: 42px;
+      line-height: 60px;
+      margin-bottom: 93px;
+    }
+  }
+}
+
+.mentions-list {
+  @include flex-column-center;
+  @include mobile-normal {
+    padding: 0 42px;
+  }
+
+  @include min-width(#{$landscape-mobile-big + 1}) {
+    @include flex-row-between;
+    flex-flow: row wrap;
+  }
+
+  &__item {
+    @include flex-column-center;
+    margin-bottom: 45px;
+
+    @include mobile-normal {
+      margin-bottom: 67px;
+    }
+
+    @include tablet {
+      width: 40%;
+      margin-bottom: 55px;
+    }
+
+    @include desktop {
+      width: 30%;
+      margin-bottom: 112px;
+    }
+  }
+
+  &__img {
+    margin-bottom: 32px;
+  }
+
+  &__text {
+    @include white-bold-centered-text;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 16px;
+    line-height: 24px;
+    font-style: italic;
+
+    @include desktop {
+      max-width: 320px;
+    }
+  }
+}

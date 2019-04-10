@@ -1,0 +1,93 @@
+.header {
+  background-color: rgb(39, 38, 42);
+  font-family: $font-montseratt;
+
+  @include tablet {
+    padding: 22px 20px;
+  }
+
+  &__content {
+    @include flex-row-between;
+    flex-wrap: wrap;
+    padding: 31px 6px;
+
+    @include tablet {
+      position: relative;
+      padding: 0;
+    }
+  }
+
+  &__logo {
+    @include flex-row-center;
+    text-decoration: none;
+    order: 1;
+
+    &:hover .header__logo-img {
+      background-image: url("../img/main-logo-hover.png");
+    }
+
+    &:hover .header__title {
+      color: #fff;
+    }
+  }
+
+  &__logo-img {
+    background-image: url("../img/main-logo.png");
+    width: 43px;
+    height: 41px;
+  }
+
+  &__btn {
+    font-weight: 700;
+    padding: 11px 24px;
+    font-size: 15px;
+    order: 3;
+
+    @include tablet {
+      padding: 12px 35px;
+      font-size: 16px;
+      position: absolute;
+      top: 0;
+      right: 0;
+    }
+
+    @include desktop {
+      min-width: 145px;
+      margin-left: 24px;
+      order: 3;
+    }
+  }
+
+  &__burger-menu {
+    background: url("../img/burger-menu.png") no-repeat center;
+    width: 26px;
+    height: 21px;
+    order: 3;
+
+    @include min-width(#{$landscape-mobile-big + 1}) {
+      display: none;
+    }
+
+    &_opened {
+      background: url("../img/cross.png") no-repeat center;
+
+      + .header__menu {
+        display: flex;
+      }
+    }
+  }
+
+  &__title {
+    margin-left: 13px;
+    font-size: 24px;
+    font-weight: 700;
+    color: $violet-main;
+    text-transform: uppercase;
+    font-family: $font-lato;
+    display: none;
+
+    @include min-width(#{$landscape-mobile-normal + 1}) {
+      display: block;
+    }
+  }
+}

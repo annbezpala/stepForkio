@@ -1,0 +1,159 @@
+.footer {
+  &__list {
+    padding: 40px 10px 50px;
+    width: 100%;
+
+    @include mobile-normal {
+      padding: 40px 20px 50px;
+    }
+
+
+    @include tablet {
+      @include flex-wrap-between;
+
+      padding: 56px 30px 44px;
+    }
+
+
+    @include desktop {
+      @include flex-wrap-between;
+
+      padding: 80px 18px 60px;
+    }
+  }
+}
+
+.footer-item {
+  margin-bottom: 37px;
+  font-family: $font-montseratt;
+
+  @include tablet {
+    width: 45%;
+  }
+
+
+  @include desktop {
+    max-width: 25%;
+    margin-bottom: 0;
+  }
+
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  &__logo {
+    display: flex;
+    align-items: center;
+    margin-bottom: 36px;
+
+    @include mobile-normal {
+      position: relative;
+
+      &::after {
+        content: '';
+        position: absolute;
+        display: block;
+        background-color: rgba(199, 199, 199, 0.2);
+        top: 58px;
+        height: 1px;
+        width: 100%;
+      }
+    }
+
+
+    &:hover &-img {
+      background-image: url(../img/logo-footer-hover.png);
+    }
+  }
+
+  &__logo-img {
+    @include min-width(401px) {
+      background-image: url(../img/main-logo.png);
+      width: 43px;
+      height: 41px;
+      margin-right: 18px;
+    }
+  }
+
+  &__title {
+    color: $grey-dark;
+    font-size: 24px;
+    text-transform: uppercase;
+
+    &:hover {
+      color: $violet-main;
+    }
+
+    &:hover &_violet {
+      color: $grey-dark;
+    }
+
+    &_violet {
+      color: $violet-main;
+    }
+  }
+
+  &__about {
+    color: $grey;
+    font-size: 14px;
+    line-height: 21px;
+  }
+
+  &__menu-title {
+    color: $black;
+    font-size: 16px;
+    line-height: 28px;
+    margin-bottom: 23px;
+  }
+
+  &__phone {
+    color: #31384d;
+    font-size: 30px;
+    font-weight: 700;
+    margin-bottom: 15px;
+  }
+
+  &__clock {
+    color: $grey;
+    font-size: 12px;
+    margin-bottom: 38px;
+  }
+
+  &__city {
+    color: $black;
+    font-size: 16px;
+    margin-bottom: 20px;
+  }
+
+  &__address {
+    color: $grey;
+    font-size: 14px;
+    line-height: 23px;
+  }
+
+  &__info-title {
+    color: $black;
+    font-size: 16px;
+    margin-bottom: 24px;
+  }
+
+  &__info-desc {
+    color: $grey;
+    font-size: 14px;
+    line-height: 23px;
+  }
+}
+
+.footer-menu {
+  &__link {
+    font-family: $font-montseratt;
+    color: $violet-main;
+    font-size: 15px;
+    line-height: 23px;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}

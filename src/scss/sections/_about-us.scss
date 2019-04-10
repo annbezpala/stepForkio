@@ -1,0 +1,79 @@
+.about-us {
+  position: relative;
+  background-image: url("../img/header-laptop.png");
+  background-size: 400%;
+  background-position: center;
+  padding: 43px 21px;
+  height: 80vh;
+  font-family: $font-montseratt;
+
+  @include mobile-normal {
+    padding: 101px 42px 0;
+  }
+
+
+  @include desktop {
+    background-size: cover;
+    padding-top: 60px;
+  }
+
+
+  &__content {
+    @include flex-column-center;
+  }
+
+  &__title {
+    color: #fff;
+    font-size: 48px;
+    font-weight: 700;
+
+    @include mobile-normal {
+      font-size: 54px;
+    }
+
+
+    @include tablet {
+      font-size: 72px;
+    }
+
+
+    @include desktop {
+      font-size: 82px;
+    }
+  }
+
+  &__slogan {
+    font-size: 18px;
+    line-height: 34px;
+    color: $violet-main;
+    margin: 20px 0 10px;
+    text-align: center;
+    font-family: $font-lato;
+
+    @include mobile-normal {
+      font-size: 20px;
+    }
+
+
+    @include tablet {
+      font-size: 24px;
+    }
+
+
+    @include desktop {
+      font-size: 30px;
+      margin-bottom: 18px;
+    }
+  }
+
+  &__small-info {
+    font-size: 14px;
+    text-transform: uppercase;
+    line-height: 21px;
+    color: $grey;
+
+    @include desktop {
+      font-size: 16px;
+    }
+  }
+}

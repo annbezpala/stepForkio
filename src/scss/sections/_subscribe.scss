@@ -1,0 +1,81 @@
+.section-subscribe {
+  background-color: $grey-bg;
+}
+
+.subscribe {
+  @include flex-column-center;
+  padding: 30px 5px 42px;
+
+  &__title {
+    font-family: $font-montseratt;
+    color: $violet-title;
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 39px;
+    @include mobile-normal {
+      font-size: 28px;
+    }
+    @include tablet {
+      font-size: 30px;
+    }
+    @include desktop {
+      margin-bottom: 0;
+    }
+  }
+
+  @include desktop {
+    justify-content: space-between;
+    flex-direction: row;
+    padding: 46px 20px;
+  }
+}
+
+.subscribe-form {
+  @include flex-row-center;
+  flex-wrap: wrap;
+  width: 100%;
+  max-width: 760px;
+  @include desktop {
+
+    @include flex-row-between;
+    flex-direction: row;
+  }
+
+  &__contact {
+    border-radius: 21px;
+    padding: 15px 0 15px 26px;
+    margin-bottom: 15px;
+    border: none;
+    display: block;
+    box-sizing: border-box;
+    max-width: 290px;
+    width: 100%;
+    outline: none;
+
+    &:last-child {
+      margin-bottom: 21px;
+    }
+
+    &::placeholder {
+      font-family: $font-montseratt;
+      color: #c8cbcf;
+      font-size: 14px;
+    }
+    @include tablet {
+      max-width: 335px;
+      width: 47%;
+    }
+    @include desktop {
+      margin-bottom: 0;
+    }
+  }
+
+  &__btn{
+    font-family: $font-montseratt;
+    font-size: 13px;
+    border-radius: 21px;
+    padding: 13px 31px;
+    border: 1px solid transparent;
+    width: 140px;
+  }
+}
